@@ -65,7 +65,7 @@ public class PlayFabUserMgt : MonoBehaviour
             {
                 {"LevelInfo", stringListAsJson }
             }
-        }, null, null);
+        }, null, OnError);
         PlayFabClientAPI.AddOrUpdateContactEmail(new AddOrUpdateContactEmailRequest()
         {
             EmailAddress = userEmailReg.text

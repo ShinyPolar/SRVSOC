@@ -31,6 +31,8 @@ public class Shop : MonoBehaviour
                         return;
                 }
             }, OnError);
+        if (PlayerStatsManager.Gold < 20)
+            return;
         BuyShip();
         Item_Raq.GetComponent<Item>().Purchased();
     }
@@ -47,6 +49,8 @@ public class Shop : MonoBehaviour
                         return;
                 }
             }, OnError);
+        if (PlayerStatsManager.Gold < 5)
+            return;
         BuyExtraLife();
         Item_ExtraLife.GetComponent<Item>().Purchased();
     }
